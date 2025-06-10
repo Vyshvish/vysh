@@ -1,0 +1,47 @@
+- name: Experiment 7 - Run Task on Localhost
+  hosts: local
+  tasks:
+    - name: Print Hello
+      debug:
+        msg: "Hello from Ansible on Windows via WSL!"
+
+
+
+        [local]
+        localhost ansible_connection=local
+
+
+
+  ansible -i inventory local -m ping
+
+ansible-playbook -i inventory playbook.yml
+
+-------------------------------------------------------------------
+exp4
+add id java
+jar{
+    manifest{
+        attributes(
+                'Main-Class':'org.example.Main'
+        )
+    }
+}
+-----------------------------------------------------------------------------
+dependencies
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+--------------------------------------------------------------------------------------------------
+exp3 kotlin
+fun main(args: Array<String>){
+    println("hellooo")
+    println("hiiiiiiiii")
+}
+----------------------------------------------------------------------------
+
+exp 6
+java -cp  .\target\Program2-1.0-SNAPSHOT.jar org.example.p2
