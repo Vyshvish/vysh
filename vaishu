@@ -1,3 +1,19 @@
+prg-2
+maven repo, junit for dependency
+mvn compile
+mvn test,mvn package, java -cp./target/tab/org.example.main
+--------------------------------------------------------------
+prg-3
+plugins{
+id 'java'
+id 'application'
+}
+application{
+after 2lines
+mainClass.set("org.example.Main")
+}
+./gradlew run
+----------------------------------------------------------------------
 - name: Experiment 7 - Run Task on Localhost
   hosts: local
   tasks:
@@ -17,8 +33,11 @@
 ansible-playbook -i inventory playbook.yml
 
 -------------------------------------------------------------------
-exp4
-add id java
+exp4 
+gradle init --type pom
+select grovy 2 and type yes
+opean build.gradle
+add id 'java'
 jar{
     manifest{
         attributes(
@@ -26,6 +45,8 @@ jar{
         )
     }
 }
+gradle clean build 
+java -jar./build/libs/press tab
 -----------------------------------------------------------------------------
 dependencies
 <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -44,4 +65,27 @@ fun main(args: Array<String>){
 ----------------------------------------------------------------------------
 
 exp 6
-java -cp  .\target\Program2-1.0-SNAPSHOT.jar org.example.p2
+new iteam 
+click free style project, press ok
+tigress--github hook,poll scm
+Build steps
+select---invoke top-level maven targets[clean compile test package][mvn clean test]
+Add build steps--Eexcute windows batch command[java -cp./target/prg2]
+apply,save
+click --- Build now
+------------------------------------------------------------------------------------------------
+prg-7
+wsl --install
+opean ubuntu, enter password and username
+$sudo apt update
+enter password
+$sudo apt install ansible -y
+$mkdir ~/ansible7
+$cd ~/ansible7
+$nano inventry
+paste code
+cttrl-o, press enter, ctrl-x
+$ansible -i inventory local -m ping
+$nano playbook.yml
+cttrl-o, press enter, ctrl-x
+$ansible-playbook-i inventory playbook.yml
